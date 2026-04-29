@@ -23,6 +23,9 @@ ament_target_dependencies(${PROJECT_NAME}
   "gazebo_ros"
 )
 ament_export_libraries(${PROJECT_NAME})
+if(WIN32 AND MSVC)
+  set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
 
 ## Install
 install(TARGETS

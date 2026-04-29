@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES
+
 #include <gazebo_version_helpers/GazeboVersionHelpers.h>
 #include <gazebo/physics/physics.hh>
 

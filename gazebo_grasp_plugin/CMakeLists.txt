@@ -31,6 +31,9 @@ ament_auto_add_library(gazebo_grasp_fix SHARED
 )
 
 link_directories(${gazebo_dev_LIBRARY_DIRS})
+if(WIN32 AND MSVC)
+  set_target_properties(gazebo_grasp_fix PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
 
 target_include_directories(gazebo_grasp_fix PUBLIC include)
 ament_target_dependencies(gazebo_grasp_fix
